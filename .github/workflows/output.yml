@@ -1,0 +1,8 @@
+name: Output of environment metadata collectively called as context
+on: workflow_dispatch
+jobs:
+  output:
+    runs-on: ubuntu-latest
+    steps:
+     - name: this will print the env metadata
+       run: echo "${{ toJSON(github) }}"
